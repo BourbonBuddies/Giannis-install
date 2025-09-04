@@ -1,11 +1,12 @@
-Gianni’s Pizza — Install Page (No TestFlight)
+Gianni’s Pizza — Install Page
 
-1) Upload this folder to any HTTPS host (GitHub Pages, Netlify, S3, etc.).
+1) Upload this folder to any HTTPS host (Netlify, S3/CloudFront, GitHub Pages, your web host).
 2) Edit index.html and replace:
    - REPLACE_WITH_APK_URL.apk
-   - REPLACE_WITH_MANIFEST_PLIST_URL  (must be HTTPS and publicly reachable)
-3) Share the page URL.
+   - REPLACE_WITH_TESTFLIGHT_LINK
+   - REPLACE_WITH_MANIFEST_PLIST_URL
+3) Share the /index.html link.
 
-Notes:
-- Android: users download the APK and install (may need to allow “Install unknown apps”).
-- iOS Ad Hoc: works only for devices included in your Ad Hoc provisioning profile (up to 100 per year). Users must open the link in Safari.
+Optional:
+- Replace assets/logo.png with a different logo if desired.
+- Favicon is in assets/favicon.png.
