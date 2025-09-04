@@ -4,95 +4,94 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Install Gianni’s Pizza App</title>
-  <meta name="theme-color" content="#108a49">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
   <style>
-    :root {
-      --primary: #108a49;
-      --accent: #d71a21;
-      --dark: #0a0a0a;
-      --light: #ffffff;
-    }
-    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--dark);
-      background: radial-gradient(1200px 600px at 50% -10%, #112, transparent 70%), #111;
+      background: #fdfdfd;
+      color: #111;
     }
     header {
       text-align: center;
-      padding: clamp(24px, 5vw, 56px) 20px 8px;
+      padding: 32px 16px 8px;
     }
-    header img.logo {
+    header img {
       max-width: 720px;
       width: 92%;
       height: auto;
-      filter: drop-shadow(0 14px 36px rgba(0,0,0,.45));
     }
     main {
-      max-width: 860px;
-      margin: 12px auto 40px;
-      padding: 0 16px 32px;
+      max-width: 840px;
+      margin: 10px auto 40px;
+      padding: 0 16px;
     }
     .card {
       background: #fff;
-      border-radius: 18px;
+      border-radius: 16px;
       padding: 22px;
-      box-shadow: 0 14px 40px rgba(0,0,0,.25);
-      border: 1px solid rgba(255,255,255,.06);
+      box-shadow: 0 12px 36px rgba(0,0,0,.15);
     }
-    h1, h2 { color: #111; margin: 0 0 10px; }
-    p { color: #333; line-height: 1.45; }
-    .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin: 14px 0 6px; }
+    h1 {
+      margin-top: 0;
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 20px 0 10px;
+    }
     a.btn {
-      text-decoration: none;
       padding: 14px 18px;
       border-radius: 12px;
+      text-decoration: none;
       font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      border: 2px solid transparent;
-      transition: transform .05s ease, box-shadow .2s ease;
-      will-change: transform;
+      display: inline-block;
     }
-    a.btn:hover { transform: translateY(-1px); }
-    a.btn:active { transform: translateY(0); }
-    .btn-android { background: var(--primary); color: #fff; }
-    .btn-ios { background: var(--accent); color: #fff; }
-    .btn-adhoc { background: #f3f4f6; color: #111; border-color: #e5e7eb; }
-    .note { color: #666; font-size: .95rem; margin-top: 10px; }
-    .howto { margin-top: 18px; display: grid; gap: 8px; }
-    .howto div { background: #fafafa; border: 1px dashed #e5e7eb; border-radius: 10px; padding: 10px 12px; color: #333; }
-    footer { text-align: center; color: #bbb; font-size: .9rem; padding: 22px 0 42px; }
-    code { background: #f3f3f3; padding: 3px 6px; border-radius: 6px; }
+    .btn-android {
+      background: #108a49;
+      color: #fff;
+    }
+    .btn-adhoc {
+      background: #f3f4f6;
+      color: #111;
+      border: 2px solid #e5e7eb;
+    }
+    .note {
+      color: #555;
+      font-size: .95rem;
+      margin-top: 12px;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img class="logo" src="assets/logo.png" alt="Gianni’s Pizza logo">
+    <!-- logo.png must be inside /assets folder at repo root -->
+    <img src="assets/logo.png" alt="Gianni’s Pizza logo">
   </header>
   <main>
     <div class="card">
       <h1>Install the Gianni’s Pizza App</h1>
-      <p>Tap a button below to install. The app simply opens <strong>GiannisItalianPizza.com</strong> for fast access.</p>
+      <p>This app opens <strong>GiannisItalianPizza.com</strong> for quick access.</p>
+
       <div class="buttons">
-        <a class="btn btn-android" href="REPLACE_WITH_APK_URL.apk">▶ Android — Download APK</a>
-<a class="btn btn-adhoc" href="itms-services://?action=download-manifest&url=REPLACE_WITH_MANIFEST_PLIST_URL">iOS — Direct Install (Ad Hoc)</a>
+        <!-- ANDROID: replace with your real APK link -->
+        <a class="btn btn-android"
+           href="https://github.com/YOUR-USERNAME/giannis-install/releases/download/v1.0.0/GiannisPizza.apk">
+          ▶ Android — Download APK
+        </a>
+
+        <!-- iOS Ad Hoc: manifest must be hosted on your GitHub Pages site -->
+        <a class="btn btn-adhoc"
+           href="itms-services://?action=download-manifest&url=https://YOUR-USERNAME.github.io/giannis-install/ios/manifest.plist">
+          iOS — Direct Install (Ad Hoc)
+        </a>
       </div>
+
       <div class="note">
-        <strong>Notes:</strong> Android may ask to allow “Install unknown apps.” TestFlight requires Apple’s TestFlight app. Ad Hoc installs only work for pre-registered device UDIDs.
-      </div>
-      <div class="howto">
-        <div><strong>Android:</strong> Download the APK → open it → Install. If blocked, enable <em>Settings → Security → Install unknown apps</em> for your browser.</div>
-        
-        <div><strong>iOS via Ad Hoc:</strong> Device must be on your provisioning profile. Tap the link, the app installs directly.</div>
+        • Android may require enabling “Install unknown apps.”<br>
+        • iOS Ad Hoc only works on devices added to your provisioning profile (max 100 per year). Open the page in Safari.
       </div>
     </div>
   </main>
-  <footer>
-    © 2025 Gianni’s Pizza — This app does not collect personal data.
-  </footer>
 </body>
 </html>
